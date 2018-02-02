@@ -1,7 +1,4 @@
-/* 1. Complete the function below to calculate product line 
-      Input: price of the product (double)
-      Input: quantity selected (integer)
-      Output: product line totals (double)
+/* 1. 
 */
 function calculateProdTotal (price, quantity) {
     total = price * quantity;
@@ -9,34 +6,21 @@ function calculateProdTotal (price, quantity) {
 
 }
 
-/* 2. Complete the function below to calculate gross cart totals
-      use the array of product line total argument
-      Input: prodTotals is an array of product line totals (array of double)
-      Output: gross cart totals (double)
-  
-      NOTE: since we haven't covered loops yet, please assume the array will
-            always have 3 elements (i.e., bananas, oranges, apples)
+/* 2.
 */
 function calculateSubtotal (prodTotals) {
     subtotal = subtotalBananas + subtotalApples + subtotalOranges;
     return(subtotal);
 }
 
-/* 3. Complete the function below to calculate added taxes
-      Input: gross cart totals (double) before tax and shipping
-      Input: tax rate (i.e., 0.10 for 10%)
-      Output: added taxes for the cart (double)
+/* 3.
 */
 function calculateTaxes(grossTotal, taxRate) {
     taxes = TAX_RATE * subtotal;
     return (taxes);
 }
 
-/* 4. Complete the function below to calculate total
-      Input: gross cart totals (double) before tax and shipping
-      Input: shipping fee (always $4.00)
-      Input: added tax
-      Output: total cart amount inclusive of shipping and taxes (double)
+/* 4.
 */
 function calculateTotal (grossTotal, addedShipping, addedTax) {
     total = subtotal + shipping + taxes;
