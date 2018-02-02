@@ -4,7 +4,9 @@
       Output: product line totals (double)
 */
 function calculateProdTotal (price, quantity) {
-    return 0;   // replace this!
+    total = price * quantity;
+    return(total);
+
 }
 
 /* 2. Complete the function below to calculate gross cart totals
@@ -16,7 +18,8 @@ function calculateProdTotal (price, quantity) {
             always have 3 elements (i.e., bananas, oranges, apples)
 */
 function calculateSubtotal (prodTotals) {
-    return 0;   // replace this!
+    subtotal = subtotalBananas + subtotalApples + subtotalOranges;
+    return(subtotal);
 }
 
 /* 3. Complete the function below to calculate added taxes
@@ -25,7 +28,8 @@ function calculateSubtotal (prodTotals) {
       Output: added taxes for the cart (double)
 */
 function calculateTaxes(grossTotal, taxRate) {
-    return 0;   // replace this!
+    taxes = TAX_RATE * subtotal;
+    return (taxes);
 }
 
 /* 4. Complete the function below to calculate total
@@ -35,7 +39,8 @@ function calculateTaxes(grossTotal, taxRate) {
       Output: total cart amount inclusive of shipping and taxes (double)
 */
 function calculateTotal (grossTotal, addedShipping, addedTax) {
-    return 0;   // replace this!
+    total = subtotal + shipping + taxes;
+    return (total);   // replace this!
 }
 
 /* 5. We want to inform the users when certain items run out of stock
