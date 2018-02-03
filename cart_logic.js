@@ -1,30 +1,30 @@
 /* 1. 
-*/
-function calculateProdTotal (price, quantity) {
+ */
+function calculateProdTotal(price, quantity) {
     total = price * quantity;
-    return(total);
+    return (total);
 
 }
 
 /* 2.
-*/
-function calculateSubtotal (prodTotals) {
+ */
+function calculateSubtotal(prodTotals) {
     subtotal = subtotalBananas + subtotalApples + subtotalOranges;
-    return(subtotal);
+    return (subtotal);
 }
 
 /* 3.
-*/
+ */
 function calculateTaxes(grossTotal, taxRate) {
     taxes = TAX_RATE * subtotal;
     return (taxes);
 }
 
 /* 4.
-*/
-function calculateTotal (grossTotal, addedShipping, addedTax) {
+ */
+function calculateTotal(grossTotal, addedShipping, addedTax) {
     total = subtotal + shipping + taxes;
-    return (total);   // replace this!
+    return (total); // replace this!
 }
 
 /* 5. We want to inform the users when certain items run out of stock
@@ -51,5 +51,11 @@ function calculateTotal (grossTotal, addedShipping, addedTax) {
 
 */
 function updateProdAvailability(product, selected, availability) {
-    return; // replace this!
+    if (selected <= (.5 * availability)) {
+        updateProdAvailabilityLabel(product, "Limited Supply", LIMITED_SUPPLY)
+    } else if (availability >= selected) {
+        updateProdAvailabilityLabel(product, "In-Stock", AVAILABLE)
+    } else if (availability < selected) {
+        updateProdAvailabilityLabel(product, "Out of Stock", OUT_OF_STOCK)
+    }
 }
